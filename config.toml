@@ -1,3 +1,74 @@
-baseURL = "http://example.org/"
+baseurl = "https://girewards.com"
+contentDir = "content"
 languageCode = "en-us"
-title = "My New Hugo Site"
+languageLang = "en"
+title = "Group Incentive Rewards"
+copyright = "Copyright &copy; {year} Group Incentive Rewards."
+permalinks = "/:slug/"
+
+preserveTaxonomyNames = false
+
+canonifyURLs = true
+
+enableRobotsTXT = true # generate robots.txt
+
+[params]
+disallow_search_engines = false # set robots.txt to disallow everything
+
+# add redirects/headers
+[outputs]
+home = ["HTML", "RSS", "REDIRECTS", "HEADERS"]
+
+# remove .{ext} from text/netlify
+[mediaTypes."text/netlify"]
+suffixes = [""]
+delimiter = ""
+
+# add output format for netlify _redirects
+[outputFormats.REDIRECTS]
+mediatype = "text/netlify"
+baseName = "_redirects"
+isPlainText = true
+notAlternative = true
+
+# add output format for netlify _headers
+[outputFormats.HEADERS]
+mediatype = "text/netlify"
+baseName = "_headers"
+isPlainText = true
+notAlternative = true
+
+# RSS, categories and tags disabled for an easy start
+# See configuration options for more details:
+# https://gohugo.io/getting-started/configuration/#toml-configuration
+#disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+
+disableKinds = ["taxonomy", "taxonomyTerm"]
+
+[blackfriday]
+hrefTargetBlank = true
+
+[[menu.main]]
+name = "Group Travel"
+weight = 1
+identifier = "Group Travel"
+url = "group-travel"
+
+[[menu.main]]
+name = "Employee/Customer Retenion & Rewards"
+weight = 2
+identifier = "Employee/Customer Retenion & Rewards"
+url = "employee-customer-retenion-rewards"
+
+[[menu.main]]
+name = "Incentive Travel"
+weight = 3
+identifier = "Incentive Travel"
+url = "incentive-travel"
+
+
+[[menu.main]]
+name = "Contact us"
+weight = 4
+identifier = "Contact Us"
+url = "contact"
