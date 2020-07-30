@@ -32,12 +32,12 @@
         </symbol>
     </svg>
 </section>
-<section class="clients_section container-sm">
+<section class="clients_section container-xs">
     <h2>Our Clients</h2>
     <div class="clients">
         {{ range .Site.Data.clients}}
         <div class="image">
-            <img src="{{.image}}" alt="">
+            <img src="{{.image}}" alt="" width="150">
         </div>
         {{ end }}
     </div>
