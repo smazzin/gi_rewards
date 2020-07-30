@@ -17,7 +17,7 @@
                     <h1 class="animated title" data-animation-in="fadeInUp">
                         {{ .title }}
                     </h1>
-                    <a href="#" class="btn-light button-custom animated" data-animation-in="fadeInUp">
+                    <a href="{{.url | relURL }}" class="btn-light button-custom animated" data-animation-in="fadeInUp">
                         {{ .button }}
                     </a>
                 </div>

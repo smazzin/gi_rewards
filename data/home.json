@@ -3,21 +3,21 @@
         "title": "Group Travel",
         "button": "More Info",
         "image": "/images/group-lg.jpg",
-        "url": null,
+        "url": "/group-travel",
         "id": "1"
     },
     {
         "title": "Incentive Travel",
         "button": "More Info",
         "image": "/images/incentive-lg.jpg",
-        "url": null,
+        "url": "/incentive-travel",
         "id": "2"
     },
     {
         "title": "Integrated Reward Solutions",
         "button": "More Info",
         "image": "/images/rewards-lg.png",
-        "url": null,
+        "url": "/integrated-reward-solutions",
         "id": "3"
     }
 ]
