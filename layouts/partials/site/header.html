@@ -21,7 +21,7 @@
                         {{ .Pre }}
                         {{ .Name }}
                     </a>
-                    <ul class="sub-menu">
+                    <ul class="sub-nav">
                         {{ range .Children }}
                         <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
                             <a href="{{ .URL }}">{{ .Name }}</a>

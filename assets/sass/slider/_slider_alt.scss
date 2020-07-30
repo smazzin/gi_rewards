@@ -38,20 +38,28 @@
     bottom: 25px;
 }
 
-.flickity-prev-next-button.previous {
-  position: relative;
-  bottom: 30px;
-  left: 45%;
-  margin-right: 2em;
-}
-.flickity-prev-next-button.next {
-  position: relative;
-  bottom: 30px;
-  left: 45%;
-  margin-left: 2em;
-}
+// .flickity-prev-next-button.previous {
+//   position: relative;
+//   bottom: 30px;
+//   left: 35%;
+//   margin-right: 2em;
+// }
+// .flickity-prev-next-button.next {
+//   position: relative;
+//   bottom: 30px;
+//   left: 45%;
+//   margin-left: 2em;
+// }
 
 @media all and (max-width:760px) {
+
+.flickity-prev-next-button.next,
+.flickity-prev-next-button.previous {
+  top: 45;
+}
+  .text {
+    top: 35%;
+  }
   h1 {
     color: $white;
   }
