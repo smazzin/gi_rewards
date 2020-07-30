@@ -14,4 +14,9 @@ From a 4-night retreat at an all-inclusive in Jamaica to a 30 day excursion thro
 
 Groups that we accommodate:
 
-Company Employee Retreats, Corporate Incentive Group Trips, Conventions, Small Groups, Large Groups, & Family Reunions.  
+- Company Employee Retreats
+- Corporate Incentive Group Trips
+- Conventions
+- Small Groups
+- Large Groups
+- Family Reunions
