@@ -1,141 +1,127 @@
 {{ define "main" }}
-    <section>
-        <div class="top-hero" style="background-image: url(' {{ .Site.Data.home.tophero.nocontact | relURL }} ') ;">
-            <!-- <div class="overlay"></div> -->
-            <div class="top-hero-content">
-                <div class="container-sm">
-                    <h1>{{ .Site.Data.home.tophero.alttitle }}</h1>
-                    <a class="btn btn-red-shadow" href="tel:{{ .Site.Data.contact.phone }}">{{ .Site.Data.home.tophero.button }}</a>
-                </div>
+<!--
+<section class="banner__slider">
+    <div class="slider stick-dots">
+        {{ range .Site.Data.home }}
+        <div class="slide">
+            <div class="slide__img">
+                <img src="" alt=""
+                    data-lazy="{{ .image }}"
+                    class="full-image animated" data-animation-in="zoomInImage" />
             </div>
-            <svg data-name="Layer 1" id="4c20d5fe-6b2f-413f-94b8-2ad5b1aa331d" preserveAspectRatio="xMinYMax" viewBox="0 0 1618 139"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M1098.9,89.1C833.8,117.9,632.8,66.8,293.4,31.8,187.5,20.9,87.5,23.5,0,32.3V130H1618V3C1395.3,2.2,1362,60.5,1098.9,89.1Z"
-                    style="fill:#0099FF;opacity:0.30000001192092896;isolation:isolate" transform="translate(0 -2.99)"></path>
-                <path
-                    d="M1618,143V59.5c-56.8,18.8-123.8,38.3-223.9,52.3-267,37.4-469.4-28.9-811.2-74.4C317.2,2.2,88.6,75.9,0,110.4V143Z"
-                    style="fill:#0099FF" transform="translate(0 -2.99)"></path>
-                <path
-                    d="M1618,143V53c-96.7,19.1-160.5,56.4-331.2,77.7C1047,160.7,865.1,107.5,558,71.1,262.1,35.9,17.4,135.2,0,142.4v.6Z"
-                    style="fill:#fff" transform="translate(0 -2.99)"></path>
-            </svg>
-        </div>
-    </section>
-    <section>
-        <div class="top-section">
-            <div class="container-sm">
-                <h1 class="title">{{ .Site.Data.home.topsection.title | safeHTML }}</h1>
-                <p class="description">{{ .Site.Data.home.topsection.description | safeHTML }}</p>
-                <a class="btn btn-red-shadow" href="{{.Site.Data.contact.scheduleurl}}">
-                    {{ .Site.Data.contact.scheduleblurb }}
-                </a>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="services">
-            <div class="section-title mb-2">
-                <h2>{{ .Site.Data.home.services.title }}</h2>
-            </div>
-            <div class="container-fluid">
-                <div class="grid">
-                    {{ range .Site.Data.home.servicelist.items }}
-                        <div class="card">
-                            <h4 class="title">
-                                <a href="{{.url | relURL}}">{{ .title }}</a>
-                            </h4>
-                            <p class="description">{{ .description }}</p>                            
-                            <img class="car-img" src="{{.image | relURL}}" alt="{{.title}}">                       
-                        </div>
-                    {{ end }}
+            <div class="slide__content ">
+                <div class="slide__content--headings text-center">
+                    {{/*  <p class="animated top-title" data-animation-in="fadeInUp" data-delay-in="0.3">
+                        {{ .title }}
+                    </p>  */}}
+                    <h1 class="animated title" data-animation-in="fadeInUp">
+                        {{ .title }}
+                    </h1>
+                    <button class="btn-light btn button-custom animated" data-animation-in="fadeInUp">
+                        {{ .button }}
+                    </button>
                 </div>
             </div>
         </div>
-    </section>
-    <section>
-        <div class="section-title">
-            <h2>{{ .Site.Data.home.middlehero.title }}</h2>
+        {{ end }}
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="44px" height="44px" id="circle"
+            fill="none" stroke="currentColor">
+            <circle r="20" cy="22" cx="22" id="test">
+        </symbol>
+    </svg>
+</section>
+-->
+
+<div class="main-carousel">
+    {{ range .Site.Data.home }}
+    <div id="slide-{{.id}}" class="carousel-cell og" data-id="{{.id}}" style="background:url('{{.image}}') no-repeat center">
+        <div class="bg"></div>
+        <div class="text">
+            <h1>{{ .title }}</h1>
+            <p><a class="btn btn-white" href="">{{ .button }}</a></p>
         </div>
-        <div class="middle-hero" style="background-image: url(' {{ .Site.Data.home.middlehero.image | relURL }} ') ;">
-            <div class="overlay"></div>
-            <div class="middle-hero-content">
-                <h2>{{ .Site.Data.home.middlehero.subtitle }}</h2>
-                <a class="btn btn-red-shadow" href="tel:{{ .Site.Data.contact.phone }}">{{ .Site.Data.home.middlehero.button }}</a>
-            </div>
-            <svg data-name="Layer 1" id="4c20d5fe-6b2f-413f-94b8-2ad5b1aa331d" preserveAspectRatio="xMinYMax" viewBox="0 0 1618 139"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M1098.9,89.1C833.8,117.9,632.8,66.8,293.4,31.8,187.5,20.9,87.5,23.5,0,32.3V130H1618V3C1395.3,2.2,1362,60.5,1098.9,89.1Z"
-                    style="fill:#0099FF;opacity:0.30000001192092896;isolation:isolate" transform="translate(0 -2.99)"></path>
-                <path
-                    d="M1618,143V59.5c-56.8,18.8-123.8,38.3-223.9,52.3-267,37.4-469.4-28.9-811.2-74.4C317.2,2.2,88.6,75.9,0,110.4V143Z"
-                    style="fill:#0099FF" transform="translate(0 -2.99)"></path>
-                <path
-                    d="M1618,143V53c-96.7,19.1-160.5,56.4-331.2,77.7C1047,160.7,865.1,107.5,558,71.1,262.1,35.9,17.4,135.2,0,142.4v.6Z"
-                    style="fill:#fff" transform="translate(0 -2.99)"></path>
-            </svg>
-        </div>
-    </section>
-    <section>
-        <div class="container p-0">
-            <div class="about">
-                <div class="section1">
-                    <h2>{{ .Site.Data.home.section1.title }}</h2>
-                    <p>{{ .Site.Data.home.section1.description }}</p>
-                    <a class="btn btn-red-shadow" href="tel:{{ .Site.Data.contact.phone }}">{{ .Site.Data.home.section1.button }}</a>
-                </div>
-                <div class="section2">
-                    <img src="{{ .Site.Data.home.section2.image }}" alt="">
-                    <p>{{ .Site.Data.home.section2.description }}</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="reviews">
-        <div class="section-title mb-2">
-            <h2>{{ .Site.Data.home.reviews.title }}</h2>
-        </div>
-        <div class="container-fluid">
-           
-                <!-- <div id="google-reviews"></div> -->
-                
-                <div class="grid-3">
-                    {{ range last 3 .Site.Data.googlereviews.reviews }}
-                    <div class="review">
-                        <div class="review-meta">
-                            <span class="review-author">
-                                {{ .Name }}
-                            </span>
-                        </div>
-                        <div class="review-stars">
-                            <ul>
-                                <li><i class="star"></i></li>
-                                <li><i class="star"></i></li>
-                                <li><i class="star"></i></li>
-                                <li><i class="star"></i></li>
-                                <li><i class="star"></i></li>
-                            </ul>
-                        </div>
-                        {{ with .Comment }}
-                        <p class="review-text">{{ . }}</p>
-                        {{ end }}
-                    </div>
-                    {{ end }}
-                </div>
-        </div>
-    </section>
-    <section>
-        <div class="container-sm">
-            <div class="homeadvisor">
-                <div class="grid-3 text-center">
-                    {{ range .Site.Data.HomeAdvisor }}
-                    <a href="{{.url}}">
-                        <img src="{{ .image }}" alt="{{.alt}}">
-                    </a>
-                    {{ end }}
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
+    {{ end }}
+</div>
+
+<!--<script>
+    /*
+    ** With Slick Slider Plugin : https://github.com/marvinhuebner/slick-animation
+    ** And Slick Animation Plugin : https://github.com/marvinhuebner/slick-animation
+    */
+
+    // Init slick slider + animation
+    $('.slider').slick({
+        autoplay: true,
+        speed: 800,
+        lazyLoad: 'progressive',
+        arrows: true,
+        dots: false,
+        prevArrow: '<div class="slick-nav prev-arrow"><i></i><svg><use xlink:href="#circle"></svg></div>',
+        nextArrow: '<div class="slick-nav next-arrow"><i></i><svg><use xlink:href="#circle"></svg></div>',
+    }).slickAnimation();
+
+
+
+    $('.slick-nav').on('click touch', function (e) {
+
+        e.preventDefault();
+
+        var arrow = $(this);
+
+        if (!arrow.hasClass('animate')) {
+            arrow.addClass('animate');
+            setTimeout(() => {
+                arrow.removeClass('animate');
+            }, 1600);
+        }
+
+    });
+</script>  -->
+<script>
+    // individual slide animations
+        var slides = function slides(i) {
+            // var _from = '#slide-1';
+            var _to = '#slide-' + i;
+            var bg = '#slide-' + i + ' .bg';
+            var title = '#slide-' + i + ' h1';
+            var text = '#slide-' + i + ' p';
+
+            TweenLite.from(bg, 1, { scale: 1.25 });
+            TweenLite.from(title, 1, { y: '105px', autoAlpha: 0 });
+            TweenLite.from(text, 1, { delay: .5, y: '105px', autoAlpha: 0 });
+        };
+
+        // setup for the flickity slider
+        var slideFlickity = function slideFlickity() {
+            // flickity init	
+            var slideList = $('.main-carousel').flickity({
+                cellAlign: 'center',
+                wrapAround: true,
+                pageDots: true
+            });
+
+            slideClick(slideList);
+        };
+
+        var slideClick = function slideClick(slideList) {
+            slideList.data('flickity').on('select', function () {
+                var index = this.selectedIndex + 1;
+                slides(index);
+            });
+        };
+
+        // load flickity first
+        slideFlickity();
+
+        // intro animation second
+        TweenLite.from('#slide-1 .bg', 1, { autoAlpha: 0 });
+        TweenLite.from('#slide-1 h1', 1.5, { autoAlpha: 0, y: '-105px' });
+        TweenLite.from('#slide-1 p', 1.5, { autoAlpha: 0, y: '105px' });
+        TweenLite.from('.previous', .5, { x: '-50px' });
+        TweenLite.from('.next', .5, { x: '50px' });
+        TweenLite.from('.flickity-page-dots', .5, { y: '105%' });
+</script>
 {{ end }}

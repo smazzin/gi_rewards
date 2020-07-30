@@ -1,37 +1,60 @@
-<header class="">
-    <div class="container header">
-        <div class="logo">
-            <a href="{{ .Site.BaseURL }}">
-                <img src="/images/logo-sm.png" alt="{{.Site.Title}}">
-            </a>
-        </div>
-        <div class="book-online">
-            <a class="btn btn-red-shadow" href="{{.Site.Data.contact.scheduleurl}}">
-                {{ .Site.Data.contact.scheduleblurb }}
-            </a>
-        </div>
-        <div class="header-phone">
-            <a class="header-phone-number" href="tel:{{ .Site.Data.contact.phone }}">{{ .Site.Data.contact.phone }}</a>
-            <span>{{ .Site.Data.contact.headerblurb }}</span>
-        </div>
-        <a id="mobile-menu__opener" class="mobile-menu__opener" href="#menu" role="button" tabindex="0">
-            <span>Menu</span>
+<nav class="navbar">
+    <div class="logo">
+        <a href="{{ .Site.BaseURL }}">
+            <img src="/images/logo.png" alt="{{.Site.Title}}">
         </a>
-        
-        <div class="mobile-menu__screen"></div>
-        <nav>
-            <ul id="menu" class="menu">
-                {{ $currentPage := . }}
-                {{ range .Site.Menus.main }}
-                <li>
-                    <a class="menu__item" href="{{.URL | relURL }}">
+    </div>
+    <div class="push-left">
+        <button id="menu-toggler" data-class="menu-active" class="hamburger">
+            <span class="hamburger-line hamburger-line-top"></span>
+            <span class="hamburger-line hamburger-line-middle"></span>
+            <span class="hamburger-line hamburger-line-bottom"></span>
+        </button>
+
+        <!--  Menu compatible with wp_nav_menu  -->
+        <ul id="primary-menu" class="menu nav-menu">
+            {{ $currentPage := . }}
+            {{ range .Site.Menus.main }}
+            {{ if .HasChildren }}
+                <li class="menu-item current-menu-item">
+                    <a class="nav__link" href="{{.URL | relURL }}">
+                        {{ .Pre }}
+                        {{ .Name }}
+                    </a>
+                    <ul class="sub-menu">
+                        {{ range .Children }}
+                        <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                            <a href="{{ .URL }}">{{ .Name }}</a>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </li>
+            {{else}}
+                <li class="menu-item current-menu-item">
+                    <a class="nav__link" href="{{.URL | relURL }}">
                         {{ .Pre }}
                         {{ .Name }}
                     </a>
                 </li>
-                {{ end }}
-            </ul>
-        </nav>
+            {{ end }}
+            {{ end }}
+            <!--
+            <li class="menu-item current-menu-item"><a class="nav__link" href="#">Home</a></li>
+            <li class="menu-item dropdown"><a class="nav__link" href="#">About</a>
+                <ul class="sub-nav">
+                    <li><a class="sub-nav__link" href="#">link 1</a></li>
+                    <li><a class="sub-nav__link" href="#">link 2</a></li>
+                    <li><a class="sub-nav__link" href="#">link 3 - long link - long link - long link</a></li>
+                </ul>
+            </li>
+            <li class="menu-item dropdown"><a class="nav__link" href="#">Contact</a>
+                <ul class="sub-nav">
+                    <li><a class="sub-nav__link" href="#">link 1</a></li>
+                    <li><a class="sub-nav__link" href="#">link 2</a></li>
+                    <li><a class="sub-nav__link" href="#">link 3 - long link - long link - long link</a></li>
+                </ul>
+            </li>
+        -->
+        </ul>
     </div>
-
-</header>
+</nav>

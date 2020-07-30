@@ -11,76 +11,13 @@
         {{ block "site/styles" . }}{{ partial "site/styles.html" . }}{{ end }}
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <script type="application/ld+json">
-            {
-            "@context": "http://schema.org/",
-            "@type": ["LocalBusiness","Service", "HVACBusiness"],
-            "aggregateRating" : {
-                "@type" : "AggregateRating",
-                "ratingValue": "5",
-                "reviewCount": "41"
-            },
-                "name": "Elevate Heating & Cooling, LLC",
-                "telephone": "541-670-9618",
-                "openingHours": "Mo-Fri 08:00-17:00",
-                "logo": "https://elevateheatingllc.com/images/elevate-logo.png",
-                "image": "https://elevateheatingllc.com/images/elevate-logo.png",
-                "url": "https://elevateheatingllc.com",
-                "priceRange" : "$$$",
-                "areaServed" : [
-                    {"@type" : "Place",
-                                "name": ["Helvetia, Oregon"]
-                    },
-                    {"@type" : "Place",
-                                "name": ["Bethany, Oregon"]
-                    },
-                    {"@type" : "Place",
-                                "name": ["North Plains, Oregon"]
-                    },
-                    {"@type" : "Place",
-                                "name": ["Beaverton, Oregon"]
-                    },
-                    {"@type" : "Place",
-                                "name": ["Hillsboro, Oregon"]
-                    },
-                    {"@type" : "Place",
-                            "name": ["Tualatin, Oregon"]
-                    },
-                    {"@type" : "Place",
-                            "name": ["Cornelius, Oregon"]
-                    },
-                    {"@type" : "Place",
-                            "name": ["Forest Grove, Oregon"]
-                    },
-                    {"@type" : "Place",
-                            "name": ["Tigard, Oregon"]
-                    },
-                    {"@type" : "Place",
-                            "name": ["Banks, Oregon"]
-                    },
-                    {"@type" : "Place",
-                            "name": ["King City, Oregon"]
-                    },
-                    {"@type" : "Place",
-                            "name": ["Cedar Hills, Oregon"]
-                    },
-                    {"@type" : "Place",
-                            "name": ["Aloha, Oregon"]
-                    }
+            <!--
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+        <script src="https://alexandrebuffet.fr/codepen/slider/slick-animation.min.js"></script>
+            -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.0/flickity.pkgd.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
 
-                ],
-                "address" : {
-                "@type" : "PostalAddress",
-                "streetAddress" : "",
-                "addressLocality" : "North Plains",
-                "addressRegion" : "OR",
-                "postalCode" : "97133"
-                },
-                "description": "We provide a range of services from furance repair and maintenance to installing new furnaces, air conditioning units and mini-split systems. You can also count on us for regular maintenance and tune-up services on all brands of HVAC systems.",
-                "sameAs": ["https://www.facebook.com/ElevateHeating/",
-                "https://www.instagram.com/elevateheatingandcooling/"]
-            }
-            </script>
         {{ block "schema" . }}
         {{ end }}
         {{- $url := replace .Permalink ( printf "%s" ( "/" | absLangURL ) ) "" -}}
@@ -113,22 +50,8 @@
                 }{{ end }}]
             }
             </script>
-        <!-- Google Tag Manager -->
-        <script>(function (w, d, s, l, i) {
-                w[l] = w[l] || []; w[l].push({
-                    'gtm.start':
-                        new Date().getTime(), event: 'gtm.js'
-                }); var f = d.getElementsByTagName(s)[0],
-                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-            })(window, document, 'script', 'dataLayer', 'GTM-T2B5FL8');</script>
-        <!-- End Google Tag Manager -->
     </head>
     <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T2B5FL8" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
 
         {{ block "header" . }}{{ partial "site/header.html" . }}{{ end }}
 
