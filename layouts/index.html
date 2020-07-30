@@ -100,7 +100,10 @@
             var slideList = $('.main-carousel').flickity({
                 cellAlign: 'center',
                 wrapAround: true,
-                pageDots: true
+                pageDots: false,
+                autoPlay: true,
+                adaptiveHeight: true,
+                contain: true
             });
 
             slideClick(slideList);
@@ -120,8 +123,8 @@
         TweenLite.from('#slide-1 .bg', 1, { autoAlpha: 0 });
         TweenLite.from('#slide-1 h1', 1.5, { autoAlpha: 0, y: '-105px' });
         TweenLite.from('#slide-1 p', 1.5, { autoAlpha: 0, y: '105px' });
-        TweenLite.from('.previous', .5, { x: '-50px' });
-        TweenLite.from('.next', .5, { x: '50px' });
+        TweenLite.from('.previous', .5, { x: '-150px' });
+        TweenLite.from('.next', .5, { x: '150px' });
         TweenLite.from('.flickity-page-dots', .5, { y: '105%' });
 </script>
 {{ end }}
