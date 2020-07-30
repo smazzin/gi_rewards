@@ -8,10 +8,11 @@
             toggleBodyClass("menu-active");
         });
 
-        function toggleBodyClass(className) {
+         function toggleBodyClass(className) {
             document.body.classList.toggle(className);
         }
 
     });
 
 })(jQuery);
+

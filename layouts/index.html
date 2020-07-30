@@ -1,5 +1,5 @@
 {{ define "main" }}
-<!--
+
 <section class="banner__slider">
     <div class="slider stick-dots">
         {{ range .Site.Data.home }}
@@ -9,17 +9,17 @@
                     data-lazy="{{ .image }}"
                     class="full-image animated" data-animation-in="zoomInImage" />
             </div>
-            <div class="slide__content ">
-                <div class="slide__content--headings text-center">
+            <div class="slide__content slide__content__left">
+                <div class="slide__content--headings text-left">
                     {{/*  <p class="animated top-title" data-animation-in="fadeInUp" data-delay-in="0.3">
                         {{ .title }}
                     </p>  */}}
                     <h1 class="animated title" data-animation-in="fadeInUp">
                         {{ .title }}
                     </h1>
-                    <button class="btn-light btn button-custom animated" data-animation-in="fadeInUp">
+                    <a href="#" class="btn-light button-custom animated" data-animation-in="fadeInUp">
                         {{ .button }}
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -32,21 +32,8 @@
         </symbol>
     </svg>
 </section>
--->
 
-<div class="main-carousel">
-    {{ range .Site.Data.home }}
-    <div id="slide-{{.id}}" class="carousel-cell og" data-id="{{.id}}" style="background:url('{{.image}}') no-repeat center">
-        <div class="bg"></div>
-        <div class="text">
-            <h1>{{ .title }}</h1>
-            <p><a class="btn btn-white" href="">{{ .button }}</a></p>
-        </div>
-    </div>
-    {{ end }}
-</div>
-
-<!--<script>
+<script>
     /*
     ** With Slick Slider Plugin : https://github.com/marvinhuebner/slick-animation
     ** And Slick Animation Plugin : https://github.com/marvinhuebner/slick-animation
@@ -79,7 +66,22 @@
         }
 
     });
-</script>  -->
+</script>
+
+
+{{/*  <div class="main-carousel">
+    {{ range .Site.Data.home }}
+<div id="slide-{{.id}}" class="carousel-cell og" data-id="{{.id}}"
+    style="background:url('{{.image}}') no-repeat center">
+    <div class="bg"></div>
+    <div class="text">
+        <h1>{{ .title }}</h1>
+        <p><a class="btn btn-white" href="">{{ .button }}</a></p>
+    </div>
+</div>
+{{ end }}
+</div>
+
 <script>
     // individual slide animations
         var slides = function slides(i) {
@@ -126,5 +128,7 @@
         TweenLite.from('.previous', .5, { x: '-150px' });
         TweenLite.from('.next', .5, { x: '150px' });
         TweenLite.from('.flickity-page-dots', .5, { y: '105%' });
-</script>
+</script>  */}}
+
+
 {{ end }}

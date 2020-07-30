@@ -16,21 +16,26 @@
             {{ $currentPage := . }}
             {{ range .Site.Menus.main }}
             {{ if .HasChildren }}
-                <li class="menu-item current-menu-item">
+                <li class="menu-item dropdown">
                     <a class="nav__link" href="{{.URL | relURL }}">
                         {{ .Pre }}
                         {{ .Name }}
+                        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.672861 0H9.32714C9.92584 0 10.2252 0.764898 9.80139 1.21316L5.47593 5.79188C5.21358 6.06937 4.78642 6.06937 4.52406 5.79188L0.198608 1.21316C-0.225193 0.764898 0.0741586 0 0.672861 0Z"
+                                fill="#09B395" />
+                        </svg>
                     </a>
                     <ul class="sub-nav">
                         {{ range .Children }}
                         <li class="nav__link {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
-                            <a href="{{ .URL }}">{{ .Name }}</a>
+                            <a href="{{.URL | relURL }}">{{ .Name }}</a>
                         </li>
                         {{ end }}
                     </ul>
                 </li>
             {{else}}
-                <li class="menu-item current-menu-item">
+                <li class="menu-item">
                     <a class="nav__link" href="{{.URL | relURL }}">
                         {{ .Pre }}
                         {{ .Name }}

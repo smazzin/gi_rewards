@@ -1,4 +1,4 @@
-baseurl = ""
+baseurl = "https://goofy-bhaskara-11bb18.netlify.app/"
 contentDir = "content"
 languageCode = "en-us"
 languageLang = "en"
@@ -62,33 +62,33 @@ url = "#"
 
 [[menu.main]]
 name = "Group Travel"
-weight = 1
+weight = 5
 parent = "Services"
 identifier = "Group Travel"
 url = "group-travel"
 
 [[menu.main]]
 name = "Integrated Reward Solutions"
-weight = 2
+weight = 6
 parent = "Services"
 identifier = "Integrated Reward Solutions"
 url = "integrated-reward-solutions"
 
 [[menu.main]]
 name = "Incentive Travel"
-weight = 3
+weight = 7
 parent = "Services"
 identifier = "Incentive Travel"
 url = "incentive-travel"
 
 [[menu.main]]
 name = "About Us"
-weight = 4
+weight = 3
 identifier = "About Us"
 url = "about-us"
 
 [[menu.main]]
 name = "Contact us"
-weight = 5
+weight = 4
 identifier = "Contact Us"
 url = "contact"

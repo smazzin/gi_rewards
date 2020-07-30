@@ -1,8 +1,3 @@
-/* Extra */
-$primary: #fff;
-$secondary: #ccc;
-$ternary: #272727;
-
 .logo {
   max-width: 200px;
 }
@@ -19,7 +14,7 @@ $ternary: #272727;
   margin-left: auto;
 }
 
-/* Menu */
+//Menu
 .hamburger {
   background: transparent;
   border: none;
@@ -85,7 +80,7 @@ $ternary: #272727;
   transition: all .25s ease-in; 
   
   @media screen and (max-width: 768px) {
-    background: $primary;
+    background: $white;
     flex-direction: column;
     justify-content: center;
     opacity: 0;
@@ -103,17 +98,9 @@ $ternary: #272727;
   
   .menu-item a {
     color: $green;
-    // display: block;
-    // line-height: 30px;
-    // margin: 0px 15px;
-    // text-decoration: none;
-    // text-transform: uppercase;
-
     font-size: 1rem;
-
     text-decoration: none;
-    //letter-spacing: 0.15em;
-    display: inline-block;
+    display: flex;
     padding: 15px 20px;
     position: relative;
 
@@ -135,14 +122,11 @@ $ternary: #272727;
       left: 0; 
     }
     
-    // &:hover {
-    //   color: lighten($green, 20);
-    //   text-decoration: underline;
-    // }
-
     @media screen and (max-width: 768px) {
       font-size: 20px;
       margin: 8px;
+      justify-content: center;
+
     }
   }
   
@@ -153,7 +137,7 @@ $ternary: #272727;
     border-top: 1px solid $green;
     display: none;
     position: absolute;
-    background-color: $primary;
+    background-color: $white;
     padding: 5px 5px;
     list-style: none; 
     width: auto;   
@@ -161,9 +145,11 @@ $ternary: #272727;
     @media screen and (max-width: 768px) {
       position: relative;
       width: 100%;
-      display: none;
+      //display: none;
       background-color: lighten(#ccc, 15%);
       box-sizing: border-box;
+      display: block;
+      z-index: 1;
     }
 }
 
@@ -179,4 +165,11 @@ $ternary: #272727;
     display:block;
     z-index: 1;
   }
+}
+
+.dropdown a svg {
+  position: relative;
+  display: flex;
+  align-self: center;
+  margin-left: .5em;
 }

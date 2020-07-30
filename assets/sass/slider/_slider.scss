@@ -7,8 +7,6 @@ $slick-opacity-default: 0.75;
 $slick-opacity-on-hover: 1;
 $slick-opacity-not-active: 0.25;
 
-$playball: 'Playball', cursive;
-$poppins: 'Poppins', sans-serif;
 
 // Design Slider
 .slider, .slide {
@@ -48,12 +46,19 @@ $poppins: 'Poppins', sans-serif;
   }
   .slide__content {
     position: absolute;
+    top: 68%;
+    left: 50%;
+    @media all and (max-width:992px) {
     top: 50%;
     left: 50%;
+    }
     transform: translate(-50%, -50%);
+    
 		&.slide__content__left{
+      @media all and (min-width:992px){
 			left: 15%;
-			transform: translate(-15%, -50%);
+      transform: translate(-15%, -50%);
+      }
 		}
 		&.slide__content__right{
 			right: 15%;
@@ -64,7 +69,7 @@ $poppins: 'Poppins', sans-serif;
       color: #FFF;
       text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       h1 {
-        font-size: 4.5rem;
+        font-size: 2rem;
         margin: 10px 0;
       }
       .animated {
@@ -74,19 +79,22 @@ $poppins: 'Poppins', sans-serif;
 				font-size: 2.5rem;
 			}
 			.title{
-                color: $white;
-				font-size: 3.5rem;
+        color: $white;
+        font-size: 3rem;
+        @media all and (max-width:992px){
+          font-size: 1.75em;
+        }
 			}
 			.button-custom{
 				text-decoration: none;
-                color: white;
-                border-color: white;
-                border: 1px solid;
-                border-radius: 20px;
-                width: 200px;
-                background-color: transparent;
-				padding: .75rem .5rem;
-				font-size: 1.5rem;
+        color: white;
+        border-color: white;
+        border: 1px solid;
+        border-radius: 20px;
+        //width: 350px;
+        background-color: transparent;
+				padding: .25rem 2.5rem;
+        font-size: 1.25rem;
 			}
 			
     }
