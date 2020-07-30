@@ -53,9 +53,13 @@
 
 @media all and (max-width:760px) {
 
+.main-carousel {
+  height: 100%;
+}
+
 .flickity-prev-next-button.next,
 .flickity-prev-next-button.previous {
-  top: 45%;
+  top: 90%;
 }
   .text {
     top: 35%;
