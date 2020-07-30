@@ -1,6 +1,6 @@
 ---
 title: Incentive Travel | Group Incentive Rewards
-pagetitle: Incentive Travel
+pagetitle: 
 description: null
 image: /images/incentive-lg.jpg
 herotext:

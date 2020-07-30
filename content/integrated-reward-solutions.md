@@ -1,6 +1,6 @@
 ---
 title: Integrated Reward Solutions | Group Incentive Rewards
-pagetitle: Integrated Reward Solutions
+pagetitle: 
 description: null
 image: /images/rewards-lg.png
 herotext:
