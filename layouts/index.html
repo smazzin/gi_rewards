@@ -36,7 +36,7 @@
     <h2>Our Clients</h2>
     <div class="clients">
         {{ range .Site.Data.clients}}
-        <div class="">
+        <div class="image">
             <img src="{{.image}}" alt="">
         </div>
         {{ end }}
@@ -80,6 +80,8 @@
 
 <script>
     $('.clients').slick({
+        autoplay: true,
+        autoplaySpeed: 2000,
         centerMode: true,
         centerPadding: '20px',
         infinite: true,
