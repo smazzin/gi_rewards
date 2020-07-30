@@ -1,4 +1,4 @@
-baseurl = "https://girewards.com"
+baseurl = ""
 contentDir = "content"
 languageCode = "en-us"
 languageLang = "en"
