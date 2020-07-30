@@ -150,18 +150,19 @@ $ternary: #272727;
 }
 
 .sub-nav {
-    border: 1px solid #ccc;
+    border-top: 1px solid $green;
     display: none;
     position: absolute;
     background-color: $primary;
     padding: 5px 5px;
     list-style: none; 
-    width: 230px;   
+    width: auto;   
+    background: $dark;
     @media screen and (max-width: 768px) {
       position: relative;
       width: 100%;
       display: none;
-      background-color: rgba(0, 0, 0, 0.20);
+      background-color: lighten(#ccc, 15%);
       box-sizing: border-box;
     }
 }
@@ -169,12 +170,13 @@ $ternary: #272727;
  .nav__link {
    &:hover + .sub-nav {
         display:block;
-
+        z-index: 1;
  }
 }
 
 .sub-nav {
   &:hover {
     display:block;
+    z-index: 1;
   }
 }

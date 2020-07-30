@@ -23,7 +23,7 @@
                     </a>
                     <ul class="sub-nav">
                         {{ range .Children }}
-                        <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                        <li class="nav__link {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
                             <a href="{{ .URL }}">{{ .Name }}</a>
                         </li>
                         {{ end }}
