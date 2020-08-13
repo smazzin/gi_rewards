@@ -1,23 +1,30 @@
 [
     {
+        "title": "American Spirit Media",
         "image": "images/american-spirit.png"
     },
     {
+        "title": "Gray TV",
         "image": "images/gray-tv.png"
     },
     {
+        "title": "ME TV - Little Rock",
         "image": "images/me-tv.png"
     },
     {
+        "title": "SCRIPPS",
         "image": "images/scripps.png"
     },
     {
+        "title": "Sinclair Broadcast Group",
         "image": "images/sinclair.png"
     },
     {
+        "title": "WALMAN",
         "image": "images/walman.png"
     },
     {
+        "title": "Pono Security",
         "image": "images/ponosecurity.png"
     }
 ]
