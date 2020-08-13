@@ -7,17 +7,17 @@
         "id": "1"
     },
     {
-        "title": "Incentive Travel",
-        "button": "More Info",
-        "image": "/images/incentive-lg.jpg",
-        "url": "/incentive-travel",
-        "id": "2"
-    },
-    {
         "title": "Integrated Reward Solutions",
         "button": "More Info",
         "image": "/images/rewards-lg.png",
         "url": "/integrated-reward-solutions",
+        "id": "2"
+    },
+    {
+        "title": "Incentive Travel",
+        "button": "More Info",
+        "image": "/images/incentive-lg.jpg",
+        "url": "/incentive-travel",
         "id": "3"
     }
 ]
