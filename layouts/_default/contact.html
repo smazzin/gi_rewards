@@ -6,12 +6,12 @@
     {{ .Content  | safeHTML }}
     <div class="col col--sm-12">
         
-        <form id="contact-form" action="https://submit-form.com/2qZl3r5AK72Or_qAtFbAb" target="_self">
-            <input type="text" name="Name" placeholder="Name" onblur="this.setAttribute('value', this.value);" value=""
-                required>
+        <form id="contact-form" name="contact" data-netlify="true" netlify-honeypot="bot-field" target="_self">
+            <input type="text" name="Name" placeholder="Name" onblur="this.setAttribute('value', this.value);" value="" required>
             <input placeholder="Email address" type="email" name="_replyto" onblur="this.setAttribute('value', this.value);" required>
             <textarea name="message" cols="30" rows="6" placeholder="Message" required></textarea>
-            <input type="hidden" name="_email.subject" value="Contact from girewards.com">
+            <input type="hidden" name="bot-field" />
+            <input type="hidden" name="_subject" value="Contact from girewards.com">
             
             <div class="center" style="width: 50%;">
                 <input class="btn btn-white" type="submit" value="Send Message">
