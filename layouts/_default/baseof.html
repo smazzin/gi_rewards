@@ -2,6 +2,16 @@
 <html lang="{{ .Site.LanguageCode | default "en" }}">
     <head>
 
+        <!-- Google Tag Manager -->
+        <script>(function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-KV98FS7');</script>
+        <!-- End Google Tag Manager -->
         {{ block "site/meta" . }}{{ partial "site/meta.html" . }}{{ end }}
 
         {{ range .AlternativeOutputFormats }}
@@ -61,7 +71,10 @@
             <link rel="manifest" href="/site.webmanifest">
     </head>
     <body>
-
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KV98FS7" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
         {{ block "header" . }}{{ partial "site/header.html" . }}{{ end }}
 
         <main class="site-main" role="main">
