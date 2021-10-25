@@ -1,5 +1,5 @@
 ---
-title: About Group Incentive Rewards | Group Incentive Rewards - (800) 541-7250
+title: About Group Incentive Rewards - (800) 541-7250
 pagetitle:
 description: Group Incentive Rewards is a multi-level marketing firm that specializes in providing diverse and innovative incentive solutions to businesses of all sizes.
 image: /images/about-us.jpg
